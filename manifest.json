@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Gemini Clarity",
+  "version": "1.0.0",
+  "description": "Monitor Gemini context usage with visual clarity indicators",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": ["https://gemini.google.com/*", "https://generativelanguage.googleapis.com/*"],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://gemini.google.com/*"],
+      "js": ["src/tokenizer.js", "src/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_title": "Gemini Clarity"
+  },
+  "options_ui": {
+    "page": "src/options.html",
+    "open_in_tab": false
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

@@ -1,0 +1,9 @@
+# OS
+.DS_Store
+
+# Backups
+*_backup.*
+
+# Secrets
+.env
+*.key

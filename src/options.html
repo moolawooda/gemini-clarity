@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 420px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #1a1a2e;
+      color: #eee;
+      padding: 24px;
+    }
+    h1 {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+    label {
+      display: block;
+      font-size: 13px;
+      color: #aaa;
+      margin-bottom: 6px;
+    }
+    input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #333;
+      border-radius: 8px;
+      background: #16213e;
+      color: #eee;
+      font-size: 14px;
+      outline: none;
+    }
+    input:focus { border-color: #4285F4; }
+    .hint {
+      margin-top: 8px;
+      font-size: 12px;
+      color: #666;
+      line-height: 1.5;
+    }
+    .hint a { color: #4285F4; text-decoration: none; }
+    .hint a:hover { text-decoration: underline; }
+    button {
+      margin-top: 16px;
+      padding: 10px 24px;
+      border: none;
+      border-radius: 8px;
+      background: #4285F4;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button:hover { background: #3367D6; }
+    .status {
+      margin-top: 12px;
+      font-size: 13px;
+      min-height: 20px;
+    }
+    .status.ok { color: #4CAF50; }
+    .status.err { color: #F44336; }
+  </style>
+</head>
+<body>
+  <h1>Gemini Clarity Settings</h1>
+  <label for="apiKey">Gemini API Key</label>
+  <input type="password" id="apiKey" placeholder="AIzaSy...">
+  <div class="hint">
+    Free to use. Get your key at <a href="https://aistudio.google.com/app/apikey" target="_blank">Google AI Studio</a>.<br>
+    Only used for <code>countTokens</code> API — no quota consumed, no cost.
+  </div>
+  <button id="save">Save</button>
+  <div class="status" id="status"></div>
+  <script src="options.js"></script>
+</body>
+</html>
