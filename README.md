@@ -1,8 +1,22 @@
-# Gemini Clarity
+<p align="center">
+  <img src="gemini_clarity_cover.png" width="600" alt="Gemini Clarity — Real-Time Context Window Monitor">
+</p>
 
-Real-time context window monitor for [Gemini](https://gemini.google.com/). Know when your conversation starts losing clarity.
+<h1 align="center">Gemini Clarity</h1>
 
-**[中文文档](./README_CN.md)**
+<p align="center">
+  Real-time context window monitor for <a href="https://gemini.google.com/">Gemini</a>. Know when your conversation starts losing clarity.
+</p>
+
+<p align="center">
+  <a href="./README_CN.md"><strong>中文文档</strong></a>
+</p>
+
+---
+
+<p align="center">
+  <img src="gemini_chat_screenshot.png" width="500" alt="Gemini Clarity in action">
+</p>
 
 ## Why
 
