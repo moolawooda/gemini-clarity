@@ -3,10 +3,17 @@
   "name": "Gemini Clarity",
   "version": "1.0.0",
   "description": "Monitor Gemini context usage with visual clarity indicators",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "gemini-clarity@extension",
+      "strict_min_version": "109.0"
+    }
+  },
   "permissions": ["activeTab", "storage"],
   "host_permissions": ["https://gemini.google.com/*", "https://generativelanguage.googleapis.com/*"],
   "background": {
-    "service_worker": "src/background.js"
+    "service_worker": "src/background.js",
+    "scripts": ["src/background.js"]
   },
   "content_scripts": [
     {
