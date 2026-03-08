@@ -47,9 +47,19 @@ Gemini's 1M token context window degrades long before hitting the limit — accu
 
 ## Install
 
+### Chrome / Edge / Chromium
+
 1. Clone or download this repo
 2. Go to `chrome://extensions/` → Enable Developer mode → Load unpacked → Select this folder
 3. Open Gemini and start chatting — **works immediately, no setup required**
+
+### Firefox
+
+1. Clone or download this repo
+2. Go to `about:debugging#/runtime/this-firefox` → Click **Load Temporary Add-on…** → Select the `manifest.json` file inside this folder
+3. Open Gemini and start chatting — **works immediately, no setup required**
+
+> **Note:** Temporary add-ons in Firefox are removed when the browser restarts. To install permanently, the extension must be signed via [Firefox Add-on Developer Hub](https://addons.mozilla.org/en-US/developers/) or by enabling unsigned extension support (`xpinstall.signatures.required = false` in `about:config`, available only in Firefox Developer Edition / Nightly / ESR).
 
 ### Optional: Enable Precise Mode
 
@@ -59,7 +69,7 @@ By default, the extension uses local character-based estimation (~80% accuracy, 
 2. Click the extension icon → Settings → Paste your key → Save
 3. The extension will now use Google's official `countTokens` API — the exact same tokenizer Gemini uses internally
 
-> **Privacy & Security:** Your API key is stored locally in `chrome.storage` and never leaves your browser. The extension has no backend server — all processing happens client-side. The `countTokens` API is completely free (no quota consumed, no cost). If you prefer not to provide an API key, the extension works just fine with local estimation.
+> **Privacy & Security:** Your API key is stored locally in the browser's extension storage and never leaves your browser. The extension has no backend server — all processing happens client-side. The `countTokens` API is completely free (no quota consumed, no cost). If you prefer not to provide an API key, the extension works just fine with local estimation.
 
 ## File Structure
 
